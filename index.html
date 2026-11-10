@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXORA — Productivity, simplified. Compare transparent monthly and yearly SaaS pricing plans, full feature matrix, and FAQs.">
+  <title>Pricing | NEXORA — Productivity, simplified.</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <a href="#main-heading" class="skip-link visually-hidden">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="NEXORA home">
+        <img src="./assets/nexora-logo.svg" alt="" width="34" height="34">
+        <span class="brand-name">NEXORA</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button
+          class="menu-button"
+          type="button"
+          popovertarget="site-menu"
+          popovertargetaction="toggle"
+          aria-controls="site-menu"
+          aria-expanded="false"
+        >
+          <svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <span>Menu</span>
+        </button>
+
+        <ul id="site-menu" class="site-menu" popover="auto">
+          <li><a class="nav-link" href="#pricing" aria-current="true">Pricing</a></li>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-push">
+            <button type="button" class="nav-signin-btn" id="open-signin-btn">Sign in</button>
+          </li>
+          <li>
+            <a class="btn btn--primary nav-cta" href="#pricing">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-badge">
+          <span class="badge-indicator" aria-hidden="true"></span>
+          <span>NEXORA · Productivity, simplified.</span>
+        </p>
+
+        <h1 id="main-heading" class="hero-title" tabindex="-1">Simple plans. Powerful possibilities.</h1>
+
+        <p class="hero-description">
+          Transparent workspace pricing engineered for clarity at every stage. Start solo, unlock custom workflows, and switch billing periods anytime.
+        </p>
+
+        <div class="billing-controls">
+          <div class="billing-toggle" role="group" aria-label="Billing period">
+            <button
+              type="button"
+              id="billing-monthly"
+              class="billing-btn is-active"
+              data-period="monthly"
+              aria-pressed="true"
+            >
+              Monthly
+            </button>
+            <button
+              type="button"
+              id="billing-yearly"
+              class="billing-btn"
+              data-period="yearly"
+              aria-pressed="false"
+            >
+              <span>Yearly</span>
+              <span class="savings-pill">Save 20%</span>
+            </button>
+          </div>
+
+          <p
+            class="savings-indicator"
+            id="savings-indicator"
+            data-monthly-text="Switch to yearly billing to save 20% across all plans"
+            data-yearly-text="Yearly billing active — saving 20% across every plan"
+          >
+            <span class="savings-indicator-tag">Save 20% annually</span>
+            <span class="savings-indicator-copy">Switch to yearly billing to save 20% across all plans</span>
+          </p>
+        </div>
+
+        <p class="visually-hidden" id="billing-announcer" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </section>
+
+    <!-- Pricing Cards & Feature Comparison Section -->
+    <section id="pricing" class="pricing-section" tabindex="-1">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="pricing-heading" class="section-title">Choose the plan that fits your pace</h2>
+          <p class="section-lead">Clear Indian Rupee pricing with zero hidden fees. Upgrade, downgrade, or change billing intervals anytime.</p>
+        </div>
+
+        <div class="pricing-grid" id="pricing-grid">
+          <!-- Starter Plan -->
+          <article class="pricing-card" data-plan="Starter" data-plan-index="0">
+            <div class="plan-top">
+              <div class="plan-header-row">
+                <h3 class="plan-name">Starter</h3>
+              </div>
+              <p class="plan-summary">Essential tools for personal workspaces and structured individual projects.</p>
+            </div>
+
+            <div class="plan-pricing-block">
+              <p class="plan-price">
+                <span class="price-amount" data-monthly="₹199" data-yearly="₹1,910">₹199</span>
+                <span class="price-unit" data-monthly-unit="per month" data-yearly-unit="per year">per month</span>
+              </p>
+              <p
+                class="plan-billing-note"
+                data-monthly-note="Billed monthly · Switch to yearly to save ₹478/yr"
+                data-yearly-note="Billed annually · Save ₹478/yr (20% off)"
+              >
+                Billed monthly · Switch to yearly to save ₹478/yr
+              </p>
+            </div>
+
+            <ul class="plan-features" role="list">
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Basic workspace</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>5 projects</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Task management</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Community support</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Basic analytics</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn--secondary plan-cta" data-plan-trigger="Starter">
+              <span>Start with Starter</span>
+              <svg class="btn-arrow" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 8h9M9 4.5L12.5 8 9 11.5"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Professional Plan (Highlighted Popular Plan) -->
+          <article class="pricing-card pricing-card--popular" data-plan="Professional" data-plan-index="1">
+            <div class="plan-top">
+              <div class="plan-header-row">
+                <h3 class="plan-name">Professional</h3>
+                <span class="popular-badge">Popular</span>
+              </div>
+              <p class="plan-summary">Full productivity suite with unlimited projects and custom workflows.</p>
+            </div>
+
+            <div class="plan-pricing-block">
+              <p class="plan-price">
+                <span class="price-amount" data-monthly="₹499" data-yearly="₹4,790">₹499</span>
+                <span class="price-unit" data-monthly-unit="per month" data-yearly-unit="per year">per month</span>
+              </p>
+              <p
+                class="plan-billing-note"
+                data-monthly-note="Billed monthly · Switch to yearly to save ₹1,198/yr"
+                data-yearly-note="Billed annually · Save ₹1,198/yr (20% off)"
+              >
+                Billed monthly · Switch to yearly to save ₹1,198/yr
+              </p>
+            </div>
+
+            <ul class="plan-features" role="list">
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Everything in Starter</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Unlimited projects</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Advanced analytics</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Priority support</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Custom workflows</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn--primary plan-cta" data-plan-trigger="Professional">
+              <span>Get Professional</span>
+              <svg class="btn-arrow" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 8h9M9 4.5L12.5 8 9 11.5"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Team Plan -->
+          <article class="pricing-card" data-plan="Team" data-plan-index="2">
+            <div class="plan-top">
+              <div class="plan-header-row">
+                <h3 class="plan-name">Team</h3>
+              </div>
+              <p class="plan-summary">Shared governance, team analytics, and role-based access control.</p>
+            </div>
+
+            <div class="plan-pricing-block">
+              <p class="plan-price">
+                <span class="price-amount" data-monthly="₹999" data-yearly="₹9,590">₹999</span>
+                <span class="price-unit" data-monthly-unit="per month" data-yearly-unit="per year">per month</span>
+              </p>
+              <p
+                class="plan-billing-note"
+                data-monthly-note="Billed monthly · Switch to yearly to save ₹2,398/yr"
+                data-yearly-note="Billed annually · Save ₹2,398/yr (20% off)"
+              >
+                Billed monthly · Switch to yearly to save ₹2,398/yr
+              </p>
+            </div>
+
+            <ul class="plan-features" role="list">
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Everything in Professional</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Team collaboration</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Team analytics</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Role-based access</span>
+              </li>
+              <li>
+                <svg class="check-icon" aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.3"/>
+                  <path d="M6.5 10.3l2.3 2.3 4.7-4.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Dedicated support</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn--secondary plan-cta" data-plan-trigger="Team">
+              <span>Choose Team</span>
+              <svg class="btn-arrow" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 8h9M9 4.5L12.5 8 9 11.5"/>
+              </svg>
+            </button>
+          </article>
+        </div>
+
+        <!-- Detailed Feature Comparison Table -->
+        <div class="comparison-block" id="comparison">
+          <div class="section-header comparison-header">
+            <h2 id="comparison-heading" class="section-title comparison-title">Compare plans side by side</h2>
+            <p class="section-lead">Inspect limits, collaboration controls, and support availability across all three NEXORA plans.</p>
+          </div>
+
+          <div tabindex="0" role="region" aria-labelledby="comparison-heading" class="table-wrapper">
+            <table class="comparison-table">
+              <caption class="visually-hidden">Feature comparison across Starter, Professional, and Team plans</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Starter</th>
+                  <th scope="col" class="is-popular-col">
+                    <span>Professional</span>
+                    <span class="table-popular-pill">Popular</span>
+                  </th>
+                  <th scope="col">Team</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Number of projects</th>
+                  <td>5 projects</td>
+                  <td class="is-popular-col"><strong>Unlimited</strong></td>
+                  <td><strong>Unlimited</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Workspace access</th>
+                  <td>Basic workspace</td>
+                  <td class="is-popular-col">Full workspace</td>
+                  <td>Shared workspaces</td>
+                </tr>
+                <tr>
+                  <th scope="row">Task management</th>
+                  <td>
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                  <td class="is-popular-col">
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Analytics</th>
+                  <td>Basic analytics</td>
+                  <td class="is-popular-col">Advanced analytics</td>
+                  <td>Team analytics</td>
+                </tr>
+                <tr>
+                  <th scope="row">Custom workflows</th>
+                  <td>
+                    <span class="cell-status cell-status--no">
+                      <span aria-hidden="true">—</span>
+                      <span class="status-text">Not included</span>
+                    </span>
+                  </td>
+                  <td class="is-popular-col">
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Team collaboration</th>
+                  <td>
+                    <span class="cell-status cell-status--no">
+                      <span aria-hidden="true">—</span>
+                      <span class="status-text">Not included</span>
+                    </span>
+                  </td>
+                  <td class="is-popular-col">
+                    <span class="cell-status cell-status--no">
+                      <span aria-hidden="true">—</span>
+                      <span class="status-text">Not included</span>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Role-based access</th>
+                  <td>
+                    <span class="cell-status cell-status--no">
+                      <span aria-hidden="true">—</span>
+                      <span class="status-text">Not included</span>
+                    </span>
+                  </td>
+                  <td class="is-popular-col">
+                    <span class="cell-status cell-status--no">
+                      <span aria-hidden="true">—</span>
+                      <span class="status-text">Not included</span>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="cell-status cell-status--yes">
+                      <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none">
+                        <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Included</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Support availability</th>
+                  <td>Community support</td>
+                  <td class="is-popular-col">Priority support</td>
+                  <td>Dedicated support</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust, Transparency & Team Contact Section -->
+    <section id="features" class="trust-section" tabindex="-1">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="features-heading" class="section-title">Why choose NEXORA</h2>
+          <p class="section-lead">Focused architecture built to keep projects organized with transparent pricing and predictable plan boundaries.</p>
+        </div>
+
+        <ul class="trust-grid" role="list">
+          <li class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="3"/>
+                <path d="M3 9h18M9 9v11"/>
+              </svg>
+            </div>
+            <h3 class="trust-title">Built for focused execution</h3>
+            <p class="trust-copy">Structured workspaces keep tasks, project boards, and analytics aligned without distracting clutter.</p>
+          </li>
+
+          <li class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/>
+                <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>
+              </svg>
+            </div>
+            <h3 class="trust-title">Scales with your workflow</h3>
+            <p class="trust-copy">Start on a five-project Starter space and move smoothly into custom workflows or role-based team controls.</p>
+          </li>
+
+          <li class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l7 3v6c0 5-3.4 9.4-7 11-3.6-1.6-7-6-7-11V5l7-3z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="trust-title">Transparent billing clarity</h3>
+            <p class="trust-copy">Every rate is displayed upfront in Monthly and 20%-discounted Yearly options with no hidden fees.</p>
+          </li>
+        </ul>
+
+        <!-- Honest Demo Security / Billing Info + Team Sales Contact -->
+        <div class="conversion-strip">
+          <div class="billing-assurance">
+            <div class="assurance-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="11" width="16" height="9" rx="2"/>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="assurance-title">Static front-end billing preview</h3>
+              <p class="assurance-copy">No live payment processor is connected in this demo, so no card credentials or billing details are collected, stored, or charged.</p>
+            </div>
+          </div>
+
+          <div class="team-sales-card">
+            <div>
+              <h3 class="team-sales-title">Evaluating NEXORA for a larger team?</h3>
+              <p class="team-sales-copy">Discuss Team collaboration, role-based access, and dedicated support requirements.</p>
+            </div>
+            <button type="button" class="btn btn--secondary" id="open-sales-btn">
+              Contact Team Sales
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-heading" tabindex="-1">
+      <div class="container faq-container">
+        <div class="section-header">
+          <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+          <p class="section-lead">Clear answers on upgrades, downgrades, billing transparency, and how this demo operates.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-1"
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>Can I upgrade my subscription anytime?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-1" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>Yes. You can move from Starter to Professional or Team at any point as your project count, workflow automation, or collaboration requirements expand.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-2"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>Can I cancel my subscription?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-2" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>Yes. Subscriptions can be cancelled before your next renewal date with zero cancellation penalties, and workspace access stays available until the current paid period finishes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-3"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>What happens when I downgrade?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-3" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>Downgrading takes effect at the end of your current billing period. Your core workspace stays accessible, while feature access and project limits adjust to match the selected tier (for example, Starter supports up to 5 active projects).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-4"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>Are there any hidden charges?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-4" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>No. All rates are displayed upfront—₹199, ₹499, and ₹999 per month, or ₹1,910, ₹4,790, and ₹9,590 per year with the 20% annual discount—with zero surprise setup or platform fees.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-5"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>What payment methods are supported?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-5" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>This site is a static front-end demo without an active payment gateway integration, so live payment methods are not yet enabled. In a production release, accepted payment methods would appear at checkout once a billing provider is connected.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-6"
+                aria-expanded="false"
+                aria-controls="faq-panel-6"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>Is my payment information secure?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-6" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>Because no payment processor is integrated in this front-end demo, no card numbers, bank details, or billing credentials are collected, transmitted, or stored. All plan previews run locally in your browser.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faq-btn-7"
+                aria-expanded="false"
+                aria-controls="faq-panel-7"
+              >
+                <span class="faq-chevron" aria-hidden="true"></span>
+                <span>Can I get a refund?</span>
+              </button>
+            </h3>
+            <div id="faq-panel-7" class="faq-panel" hidden="until-found">
+              <div class="faq-panel-inner">
+                <p>No refund policy is configured in this project yet because no live payments or real charges occur in this static front-end preview. Official refund terms would be presented prior to purchase once live billing is integrated.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Conversion CTA Section -->
+    <section class="final-cta-section">
+      <div class="container final-cta-inner">
+        <div class="final-cta-card">
+          <p class="final-cta-eyebrow">NEXORA · Productivity, simplified.</p>
+          <h2 class="final-cta-title">Ready to take control of your productivity?</h2>
+          <p class="final-cta-copy">Choose the plan that fits your workflow and start building something better with NEXORA.</p>
+          <div class="final-cta-actions">
+            <a href="#pricing" class="btn btn--primary final-cta-btn">
+              <span>Get Started Today</span>
+              <svg class="btn-arrow" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 8h9M9 4.5L12.5 8 9 11.5"/>
+              </svg>
+            </a>
+            <a href="#comparison" class="btn btn--dark-outline">Compare All Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top" aria-label="Back to top of NEXORA">
+          <img src="./assets/nexora-logo.svg" alt="" width="30" height="30">
+          <span class="brand-name">NEXORA</span>
+        </a>
+        <p class="footer-tagline">Productivity, simplified.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#comparison">Compare</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="footer-contact">Contact: Placeholder inquiry channel (Demo workspace only)</p>
+        <p class="footer-copyright">© 2026 NEXORA. Front-end pricing UI built for InternCircle Project 03.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Demo Modal: Plan Selection -->
+  <dialog id="plan-dialog" class="nexora-dialog" closedby="any" aria-labelledby="plan-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <span class="dialog-demo-badge">Interactive Demo · No Payment Processed</span>
+        <h2 id="plan-dialog-title" class="dialog-title">Plan Preview</h2>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="dialog-close-btn" value="close" aria-label="Close plan preview dialog">
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l10 10M15 5L5 15"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="dialog-body">
+      <div class="dialog-plan-summary">
+        <p class="dialog-plan-price">
+          <strong id="dialog-price-value">₹499</strong>
+          <span id="dialog-price-unit">per month</span>
+        </p>
+        <p id="dialog-billing-summary" class="dialog-billing-summary">Monthly billing preview</p>
+      </div>
+
+      <div class="dialog-features-wrap">
+        <p class="dialog-section-label">Included in this tier:</p>
+        <ul id="dialog-feature-list" class="dialog-feature-list"></ul>
+      </div>
+
+      <form id="plan-demo-form" class="dialog-form">
+        <div class="form-field">
+          <label for="demo-workspace-name">Workspace name (optional preview)</label>
+          <input
+            type="text"
+            id="demo-workspace-name"
+            name="workspaceName"
+            placeholder="e.g., Product Operations"
+            maxlength="48"
+            autofocus
+          >
+        </div>
+
+        <p id="plan-demo-feedback" class="demo-feedback" role="status" aria-live="polite" hidden></p>
+
+        <div class="dialog-actions">
+          <button type="button" class="btn btn--ghost" id="plan-dialog-cancel">Cancel</button>
+          <button type="submit" class="btn btn--primary" id="plan-demo-submit">Preview Demo Setup</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Interactive Demo Modal: Team Sales Inquiry -->
+  <dialog id="sales-dialog" class="nexora-dialog" closedby="any" aria-labelledby="sales-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <span class="dialog-demo-badge">Interactive Demo · Local Inquiry Preview</span>
+        <h2 id="sales-dialog-title" class="dialog-title">Contact Team Sales</h2>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="dialog-close-btn" value="close" aria-label="Close team sales dialog">
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l10 10M15 5L5 15"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="dialog-body">
+      <p class="dialog-intro">Share your team size and workflow goals to preview a Team inquiry locally. No email or backend request is sent in this static demo.</p>
+
+      <form id="sales-demo-form" class="dialog-form">
+        <div class="form-field">
+          <label for="sales-email">Work email</label>
+          <input
+            type="email"
+            id="sales-email"
+            name="salesEmail"
+            autocomplete="email"
+            inputmode="email"
+            placeholder="name@example.com"
+            required
+            autofocus
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="sales-team-size">Estimated team size</label>
+          <input
+            type="number"
+            id="sales-team-size"
+            name="teamSize"
+            min="2"
+            max="5000"
+            placeholder="e.g., 15"
+            required
+          >
+        </div>
+
+        <p id="sales-demo-feedback" class="demo-feedback" role="status" aria-live="polite" hidden></p>
+
+        <div class="dialog-actions">
+          <button type="button" class="btn btn--ghost" id="sales-dialog-cancel">Close</button>
+          <button type="submit" class="btn btn--primary">Preview Team Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Interactive Demo Modal: Sign In -->
+  <dialog id="signin-dialog" class="nexora-dialog" closedby="any" aria-labelledby="signin-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <span class="dialog-demo-badge">Interactive Demo · Local Simulation Only</span>
+        <h2 id="signin-dialog-title" class="dialog-title">Sign in to NEXORA</h2>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="dialog-close-btn" value="close" aria-label="Close sign in dialog">
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l10 10M15 5L5 15"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="dialog-body">
+      <p class="dialog-intro">This static front-end demo simulates workspace sign-in locally without sending credentials to a backend.</p>
+
+      <form id="signin-demo-form" class="dialog-form">
+        <div class="form-field">
+          <label for="signin-email">Work email</label>
+          <input
+            type="email"
+            id="signin-email"
+            name="email"
+            autocomplete="email"
+            inputmode="email"
+            placeholder="you@example.com"
+            required
+            autofocus
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="signin-password">Password</label>
+          <input
+            type="password"
+            id="signin-password"
+            name="password"
+            autocomplete="current-password"
+            minlength="6"
+            placeholder="Enter at least 6 characters"
+            required
+          >
+        </div>
+
+        <p id="signin-demo-feedback" class="demo-feedback" role="status" aria-live="polite" hidden></p>
+
+        <div class="dialog-actions">
+          <button type="button" class="btn btn--ghost" id="signin-dialog-cancel">Close</button>
+          <button type="submit" class="btn btn--primary">Simulate Sign In</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
